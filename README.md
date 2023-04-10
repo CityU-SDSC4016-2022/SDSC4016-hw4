@@ -1,6 +1,6 @@
 # SDSC4016 Fundamentals of Machine Learning II
 
-SDSC4016 Homework 2:
+SDSC4016 Homework 4:
 
 - [On Kaggle](https://www.kaggle.com/competitions/sdsc4016-fundls-of-ml-2-exam/overview)
 
@@ -16,37 +16,36 @@ Speaker Classification Problem
   - Python 3.10+
   - Jupyter
   - pytorch
-  - torchvision
 
-<!-- ### Install mini-conda and mamba
+### Install mini-conda and mamba
 
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash ./Miniconda3-latest-Linux-x86_64.sh
 conda install mamba -n base -c conda-forge
-``` -->
+```
 
-<!-- ### Set up conda environment
+### Set up conda environment
 
 ```bash
-mamba create -n 4016hw2
-mamba activate 4016hw2
-``` -->
+mamba create -n 4016hw4
+mamba activate 4016hw4
+```
 
-<!-- ### Installing dependencies
+### Installing dependencies
 
 ```bash
 # conda or mamba
 mamba install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 mamba install -c conda-forge Jupyter ipykernel
-mamba install -c conda-forge pandas numpy seaborn matplotlib scikit-learn tqdm
-``` -->
+mamba install -c conda-forge pandas numpy matplotlib scikit-learn tqdm
+```
 
 <!-- ### Code
 
-[Baseline](src/HW2_Baseline.ipynb)
+[Baseline](...)
 
-[Modified](src/model/efficientnetv2/HW2_efficientnetv2_lV3_0.703.ipynb) -->
+[Modified](...) -->
 
 <!-- ### Dataset
 
@@ -60,5 +59,5 @@ mamba install -c conda-forge pandas numpy seaborn matplotlib scikit-learn tqdm
 
 <!-- ### Final Score
 
-- Public: 0.70282
-- Private: 0.71159 -->
+- Public: 0.00
+- Private: 0.00 -->
