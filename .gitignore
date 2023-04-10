@@ -156,13 +156,13 @@ cython_debug/
 test*.ipynb
 
 # Model and prediction
-src/model/**/predict.csv
-src/model/**/submit.csv
-src/model/**/*.pth
 src/predict.csv
-src/submit.csv
-src/*pth
+src/output.csv
 src/*final.ipynb
+src/*.pth
+src/*.ckpt
 src/best5
 
 # Data
+data/Dataset/
+data/Dataset.zip
