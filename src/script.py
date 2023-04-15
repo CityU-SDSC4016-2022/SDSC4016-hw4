@@ -111,10 +111,10 @@ class Classifier(nn.Module):
         self.conformer = ConformerBlock(
             dim=d_model,
             dim_head=64,
-            heads=1,
+            heads=8,
             ff_mult=4,
             conv_expansion_factor=2,
-            conv_kernel_size=32,
+            conv_kernel_size=31,
             attn_dropout=dropout,
             ff_dropout=dropout,
             conv_dropout=dropout
@@ -125,8 +125,8 @@ class Classifier(nn.Module):
 
         # Project the the dimension of features from d_model into speaker nums.
         self.pred_layer = nn.Sequential(
-            nn.Linear(d_model, d_model),
-            nn.ReLU(),
+            # nn.Linear(d_model, d_model),
+            # nn.ReLU(),
             nn.Linear(d_model, n_spks),
         )
 
@@ -213,15 +213,20 @@ def valid(dataloader, model, criterion, device):
 
 def parse_args():
     """arguments"""
+    warmup_steps = 1000
+    valid_steps = warmup_steps * 2
+    save_steps = valid_steps * 5
+    total_steps = save_steps * 25
+
     config = {
-        "data_dir": "./data/Dataset/",
-        "save_path": "model.ckpt",
+        "data_dir": "./data/DatasetL/",
+        "save_path": "./model.ckpt",
         "batch_size": 32,
         "n_workers": 8,
-        "valid_steps": 2000,
-        "warmup_steps": 1000,
-        "save_steps": 10000,
-        "total_steps": 100000,
+        "valid_steps": valid_steps,
+        "warmup_steps": warmup_steps,
+        "save_steps": save_steps,
+        "total_steps": total_steps,
     }
 
     return config
