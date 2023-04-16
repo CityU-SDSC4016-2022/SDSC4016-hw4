@@ -57,7 +57,7 @@ mamba install -c conda-forge pandas numpy matplotlib scikit-learn tqdm
 
 [Results on Kaggle](md/kaggle.md) -->
 
-<!-- ### Final Score
+### Final Score
 
-- Public: 0.00
-- Private: 0.00 -->
+- Public: 0.92908
+<!-- - Private: 0.00 -->

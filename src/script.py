@@ -114,7 +114,7 @@ class Classifier(nn.Module):
             heads=8,
             ff_mult=4,
             conv_expansion_factor=2,
-            conv_kernel_size=31,
+            conv_kernel_size=32,
             attn_dropout=dropout,
             ff_dropout=dropout,
             conv_dropout=dropout
@@ -219,9 +219,9 @@ def parse_args():
     total_steps = save_steps * 25
 
     config = {
-        "data_dir": "./data/DatasetL/",
+        "data_dir": "./data/Dataset/",
         "save_path": "./model.ckpt",
-        "batch_size": 32,
+        "batch_size": 128,
         "n_workers": 8,
         "valid_steps": valid_steps,
         "warmup_steps": warmup_steps,
