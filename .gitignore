@@ -162,6 +162,7 @@ src/best5
 **/output*.csv
 *.pth
 *.ckpt
+reset.py
 
 # Data
 data/Dataset/

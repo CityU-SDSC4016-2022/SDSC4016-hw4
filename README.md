@@ -38,24 +38,30 @@ mamba activate 4016hw4
 # conda or mamba
 mamba install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 mamba install -c conda-forge Jupyter ipykernel
-mamba install -c conda-forge pandas numpy matplotlib scikit-learn tqdm
+mamba install -c conda-forge pandas numpy scikit-learn tqdm
+pip install conformer
 ```
 
-<!-- ### Code
+#### Weak Baseline
 
-[Baseline](...)
+- [Jupyter Notebook](https://github.com/CityU-SDSC4016-2022/SDSC4016-hw4/blob/notebook/src/Exam%20baseline.ipynb)
 
-[Modified](...) -->
+#### Strong Baseline
 
-<!-- ### Dataset
+1. You can run it by ```script.sh```
 
-[Training set](data/training/)
+2. Or you can run it by the following command:
 
-[Testing set](data/testing/) -->
+    ```bash
+    source ~/miniconda3/etc/profile.d/conda.sh
+    source ~/miniconda3/etc/profile.d/mamba.sh
+    mamba activate 4016hw4
+    python src/script.py
+    ```
 
-<!-- ### Tested Result on Kaggle
+### Dataset
 
-[Results on Kaggle](md/kaggle.md) -->
+- Path: ```./data/Dataset/```
 
 ### Final Score
 
