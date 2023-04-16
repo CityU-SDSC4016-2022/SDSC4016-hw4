@@ -1,5 +1,6 @@
 import csv
 import math
+from pathlib import Path
 
 from torch.optim import AdamW, Optimizer
 from torch.optim.lr_scheduler import LambdaLR
@@ -25,8 +26,10 @@ def get_cos_scheduler(optimizer: Optimizer, warmup_steps: int, training_steps: i
     return LambdaLR(optimizer, lr_lambda, last_epoch)
 
 
-def save_results(results: list[list[str]], output_path: str):
+def save_results(results: list[list[str]], path: str, accuracy: float):
     """Save the results to a CSV file."""
-    with open(output_path, 'w', newline='', encoding="utf8") as csvfile:
+    file = Path(path)
+    path = f"{file.stem}_{accuracy * 100:.4f}{file.suffix}"
+    with open(path, 'w', newline='', encoding="utf8") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerows(results)

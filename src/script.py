@@ -44,8 +44,11 @@ def main():
     print("[Info]: Finish creating model!", flush=True)
 
     steps = [warmup_steps, valid_steps, save_steps, total_steps]
-    training(train_loader, valid_loader, model, device, learning_rate, steps, save_path)
+    accuracy = training(train_loader, valid_loader, model, device, learning_rate, steps, save_path)
     print("[Info]: Finish training model!", flush=True)
+
+    if accuracy is None:
+        return
 
     # Testing Part
     test_loader, speak2id = get_test_dataloader(data_dir, 1, n_workers)
@@ -61,7 +64,7 @@ def main():
     print("[Info]: Finish testing dataset!", flush=True)
 
     # Save Result as CSV
-    save_results(result, output_path)
+    save_results(result, output_path, accuracy)
 
 
 if __name__ == "__main__":

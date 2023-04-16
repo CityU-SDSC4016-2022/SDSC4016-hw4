@@ -108,3 +108,4 @@ def training(train_loader: DataLoader, valid_loader: DataLoader, model: Classifi
             pbar.write(f"Step {step + 1}, best model saved. (accuracy={best_accuracy:.5f})")
 
     pbar.close()
+    return best_accuracy
