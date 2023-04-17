@@ -15,6 +15,7 @@ def main():
 
     # Arguments
     data_dir = "./data/Dataset/"        # Data directory, default is "./data/Dataset/"
+    test_dir = "./data/Dataset/"        # Test directory, default is "./data/Dataset/"
     save_path = "./model.ckpt"          # Model path, default is "./model.ckpt"
     output_path = "./output.csv"        # Output file path, default is "./output.csv"
     batch_size = 128                    # Batch size, default is 32
@@ -51,7 +52,7 @@ def main():
         return
 
     # Testing Part
-    test_loader, speak2id = get_test_dataloader(data_dir, 1, n_workers)
+    test_loader, speak2id = get_test_dataloader(test_dir, 1, n_workers)
     print("[Info]: Finish loading data!", flush=True)
 
     speaker_num = len(speak2id)
