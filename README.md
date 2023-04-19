@@ -2,8 +2,6 @@
 
 SDSC4016 Homework 4:
 
-- [On Kaggle](https://www.kaggle.com/competitions/sdsc4016-fundls-of-ml-2-exam/overview)
-
 ## Description
 
 Speaker Classification Problem
@@ -65,5 +63,5 @@ pip install conformer
 
 ### Final Score
 
-- Public: 0.92908
-<!-- - Private: 0.00 -->
+- Public: 0.94741
+- Private: 0.94833
