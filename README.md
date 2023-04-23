@@ -1,6 +1,6 @@
 # SDSC4016 Fundamentals of Machine Learning II
 
-SDSC4016 Homework 4:
+SDSC4016 Homework 4
 
 ## Description
 
